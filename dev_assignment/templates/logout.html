@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load bootstrap_toolkit %}
+{% block inner_body %}
+<div class="container">
+	{% if request.user.is_authenticated %}
+	<h2>Logged in</h2>
+	<p>You are logged in as: <strong>{{ request.user }}</strong></p>	
+	{% else %}
+	<h2>Logged out</h2>
+	<p>You are no longer logged in</p>
+	<p><a href="{% url login %}">Login page</a>
+	{% endif %}
+</div> <!-- /container -->
+{% endblock inner_body %}

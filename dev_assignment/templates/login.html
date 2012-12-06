@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load bootstrap_toolkit %}
+{% block inner_body %}
+<div class="container">
+	<form class="form-signin" action="{% url login %}" method="POST">
+		{% csrf_token %}
+		{{ form|as_bootstrap }}
+		<button class="btn btn-large btn-primary" type="submit">Log in</button>
+	</form>
+</div> <!-- /container -->
+{% endblock inner_body %}

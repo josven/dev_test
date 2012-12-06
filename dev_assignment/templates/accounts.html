@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block inner_body %}
+<div class="container container-fluid">
+	<div class="row-fluid">
+		<div id="sidebar" class="span3">
+			<div class="accordion" id="accordion2">
+				<div class="accordion-group">
+					<div class="accordion-heading">
+						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+						Accounts
+						</a>
+					</div>
+					<div id="collapseOne" class="accordion-body collapse in">
+						<div id="list-accounts" class="accordion-inner">
+						Load data...
+						</div>
+					</div>
+				</div>
+				<div class="accordion-group">
+					<div class="accordion-heading">
+						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+						Mailing lists
+						</a>
+					</div>
+					<div id="collapseTwo" class="accordion-body collapse">
+						<div id="list-mailing-lists" class="accordion-inner">
+						Load data...
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="content" class="span9">
+		</div>
+	</div>
+</div>
+{% endblock inner_body %}
