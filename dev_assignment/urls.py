@@ -7,7 +7,6 @@ from django.contrib.auth.decorators import login_required
 from tastypie.api import Api
 from accounts.api import AccountLeadResource
 from accounts.api import MailingListsResource
-from accounts.api import FeedResource
 from accounts.views import LoginView
 from accounts.views import AccountView
 
@@ -17,7 +16,6 @@ from django.contrib.auth.views import logout
 v1_api = Api(api_name='v1')
 v1_api.register(AccountLeadResource())
 v1_api.register(MailingListsResource())
-v1_api.register(FeedResource())
 
 admin.autodiscover()
 

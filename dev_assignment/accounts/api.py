@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+from tastypie.authentication import ApiKeyAuthentication
+from tastypie.authorization import DjangoAuthorization
 from tastypie import fields
 from tastypie.resources import ModelResource
 from models import AccountLead
@@ -18,6 +20,8 @@ class MailingListsResource(ModelResource):
     class Meta:
         queryset = MailingLists.objects.all()
         resource_name = 'mailing_lists'
+        authentication = ApiKeyAuthentication()
+        authorization = DjangoAuthorization()
 
 
 class AccountLeadResource(ModelResource):
@@ -32,6 +36,8 @@ class AccountLeadResource(ModelResource):
     class Meta:
         queryset = AccountLead.objects.all()
         resource_name = 'account_lead'
+        authentication = ApiKeyAuthentication()
+        authorization = DjangoAuthorization()
 
 
 class AccountLeadExportResource(ModelResource):
